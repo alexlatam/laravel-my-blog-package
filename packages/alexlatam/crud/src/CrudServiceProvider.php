@@ -12,7 +12,7 @@ class CrudServiceProvider extends ServiceProvider
     public function register(): void
     {
         // Register our controller
-        $this->app->make('Alexlatam\Crud\Http\Controllers\TaskController');
+        $this->app->make('Alexlatam\Crud\Http\Controllers\TasksController');
     }
 
     /**
@@ -20,6 +20,12 @@ class CrudServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Load our routes file
+        $this->loadRoutesFrom(__DIR__.'/routes/routes.php');
+        // Load our migrations from the migrations folder
+        $this->loadMigrationsFrom(__DIR__.'/migrations');
+
+        $this->loadViewsFrom(__DIR__.'/views', 'package-crud');
+
     }
 }
