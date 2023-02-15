@@ -1,0 +1,23 @@
+{
+    "name": "alexlatam/crud",
+    "authors": [
+        {
+            "name": "Alex Latam",
+            "email": "alexis.montilla@alexlatam.tech"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alexlatam\\Crud\\CrudServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Alexlatam\\Crud\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
